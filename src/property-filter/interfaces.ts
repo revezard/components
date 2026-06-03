@@ -390,6 +390,7 @@ export interface InternalFilteringProperty<TokenValue = any> {
   getTokenType: (operator?: PropertyFilterOperator) => PropertyFilterTokenType;
   getValueFormatter: (operator?: PropertyFilterOperator) => null | ((value: any) => string);
   getValueFormRenderer: (operator?: PropertyFilterOperator) => null | PropertyFilterOperatorForm<TokenValue>;
+  getOperatorDescription: (operator?: PropertyFilterOperator) => string | undefined;
   // Original property used in callbacks.
   externalProperty: PropertyFilterProperty;
 }
